@@ -28,6 +28,7 @@
     "@vben-core/shadcn-ui": "workspace:*",
     "@vben-core/shared": "workspace:*",
     "@vben-core/tabs-ui": "workspace:*",
+    "@vben/common-ui": "workspace:*",
     "@vben/constants": "workspace:*",
     "@vben/hooks": "workspace:*",
     "@vben/icons": "workspace:*",
@@ -37,6 +38,7 @@
     "@vben/types": "workspace:*",
     "@vben/utils": "workspace:*",
     "@vueuse/core": "catalog:",
+    "ant-design-vue": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
   }

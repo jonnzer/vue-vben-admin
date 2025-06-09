@@ -376,7 +376,18 @@ $namespace: vben;
   color: var(--menu-item-active-color);
   text-decoration: none;
   cursor: pointer;
-  background: var(--menu-item-active-background-color);
+  // background: var(--menu-item-active-background-color);
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    display: block;
+    width: 4px;
+    height: 60%;
+    content: '';
+    background-color: hsl(221deg 100% 54%);
+    border-radius: var(--menu-item-radius);
+  }
 }
 
 @mixin menu-item {

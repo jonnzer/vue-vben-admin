@@ -2,14 +2,12 @@
 import type { VbenFormSchema } from '@vben/common-ui';
 import type { BasicOption } from '@vben/types';
 
-import { computed, markRaw } from 'vue';
+import { computed } from 'vue';
 
 import { AuthenticationLogin, z } from '@vben/common-ui';
 import { $t } from '@vben/locales';
 
 import { useAuthStore } from '#/store';
-
-import notReceiveCode from './not-receive-code.vue';
 
 defineOptions({ name: 'Login' });
 
@@ -134,11 +132,11 @@ const smsFormSchema = computed((): VbenFormSchema[] => {
         message: $t('authentication.codeTip', [CODE_LENGTH]),
       }),
     },
-    {
-      component: markRaw(notReceiveCode),
-      hideLabel: true,
-      fieldName: 'notReceiveCode',
-    },
+    // {
+    //   component: markRaw(notReceiveCode),
+    //   hideLabel: true,
+    //   fieldName: 'notReceiveCode',
+    // },
   ];
 });
 </script>

@@ -18,3 +18,8 @@ const props = defineProps<{
     <slot></slot>
   </div>
 </template>
+<style scoped>
+.text-card-foreground {
+  color: hsl(0deg 0% 0%) !important;
+}
+</style>

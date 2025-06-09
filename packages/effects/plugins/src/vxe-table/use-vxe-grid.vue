@@ -122,11 +122,11 @@ const [Form, formApi] = useTableForm({
       class: 'w-full',
     },
   },
-  showCollapseButton: true,
+  showCollapseButton: false,
   submitButtonOptions: {
-    content: computed(() => $t('common.search')),
+    content: computed(() => $t('common.query')),
   },
-  wrapperClass: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+  wrapperClass: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
 });
 
 const showTableTitle = computed(() => {
@@ -362,6 +362,9 @@ onUnmounted(() => {
           gridClass,
         )
       "
+      :style="{
+        '--vxe-ui-table-header-background-color': '#f0f7fc',
+      }"
       v-bind="options"
       v-on="events"
     >
@@ -394,7 +397,7 @@ onUnmounted(() => {
           class="ml-2"
           v-if="gridOptions?.toolbarConfig?.search && !!formOptions"
           :status="showSearchForm ? 'primary' : undefined"
-          :title="$t('common.search')"
+          :title="$t('common.query')"
           @click="onSearchBtnClick"
         />
       </template>
@@ -407,13 +410,13 @@ onUnmounted(() => {
           :class="
             cn(
               'relative rounded py-3',
-              isCompactForm
-                ? isSeparator
-                  ? 'pb-8'
-                  : 'pb-4'
-                : isSeparator
-                  ? 'pb-4'
-                  : 'pb-0',
+              isCompactForm ? 'pb-4' : 'pb-0',
+              // ? isSeparator
+              //   ? 'pb-8'
+              //   : 'pb-4'
+              // : isSeparator
+              //   ? 'pb-4'
+              //   : 'pb-0',
             )
           "
         >
@@ -443,13 +446,13 @@ onUnmounted(() => {
               </template>
             </Form>
           </slot>
-          <div
+          <!-- <div
             v-if="isSeparator"
             :style="{
               ...(separatorBg ? { backgroundColor: separatorBg } : undefined),
             }"
             class="bg-background-deep z-100 absolute -left-2 bottom-1 h-2 w-[calc(100%+1rem)] overflow-hidden md:bottom-2 md:h-3"
-          ></div>
+          ></div> -->
         </div>
       </template>
       <!-- loading -->

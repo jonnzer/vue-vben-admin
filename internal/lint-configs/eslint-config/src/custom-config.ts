@@ -11,6 +11,8 @@ const customConfig: Linter.Config[] = [
   {
     files: ['packages/@core/ui-kit/shadcn-ui/**/**'],
     rules: {
+      'unused-imports/no-unused-vars': 'off',
+      'no-console': 'off',
       'vue/require-default-prop': 'off',
     },
   },
@@ -24,6 +26,8 @@ const customConfig: Linter.Config[] = [
     ],
     ignores: restrictedImportIgnores,
     rules: {
+      'unused-imports/no-unused-vars': 'off',
+      'no-console': 'off',
       'perfectionist/sort-interfaces': 'off',
       'perfectionist/sort-objects': 'off',
     },
@@ -32,6 +36,8 @@ const customConfig: Linter.Config[] = [
     files: ['**/**.vue'],
     ignores: restrictedImportIgnores,
     rules: {
+      'unused-imports/no-unused-vars': 'off',
+      'no-console': 'off',
       'perfectionist/sort-objects': 'off',
     },
   },
@@ -40,6 +46,8 @@ const customConfig: Linter.Config[] = [
     files: ['apps/**/**'],
     ignores: restrictedImportIgnores,
     rules: {
+      'unused-imports/no-unused-vars': 'off',
+      'no-console': 'off',
       'no-restricted-imports': [
         'error',
         {
@@ -75,6 +83,8 @@ const customConfig: Linter.Config[] = [
     files: ['packages/@core/**/**'],
     ignores: restrictedImportIgnores,
     rules: {
+      'unused-imports/no-unused-vars': 'off',
+      'no-console': 'off',
       'no-restricted-imports': [
         'error',
         {
@@ -94,6 +104,8 @@ const customConfig: Linter.Config[] = [
     files: ['packages/@core/base/**/**'],
     ignores: restrictedImportIgnores,
     rules: {
+      'unused-imports/no-unused-vars': 'off',
+      'no-console': 'off',
       'no-restricted-imports': [
         'error',
         {
@@ -123,6 +135,8 @@ const customConfig: Linter.Config[] = [
     ],
     ignores: restrictedImportIgnores,
     rules: {
+      'unused-imports/no-unused-vars': 'off',
+      'no-console': 'off',
       'no-restricted-imports': [
         'error',
         {
@@ -147,6 +161,7 @@ const customConfig: Linter.Config[] = [
       'n/prefer-global/process': 'off',
       'no-console': 'off',
       'unicorn/prefer-module': 'off',
+      'unused-imports/no-unused-vars': 'off',
     },
   },
   {
@@ -155,12 +170,14 @@ const customConfig: Linter.Config[] = [
       'n/prefer-global/buffer': 'off',
       'n/prefer-global/process': 'off',
       'no-console': 'off',
+      'unused-imports/no-unused-vars': 'off',
     },
   },
   {
     files: ['internal/**/**', 'scripts/**/**'],
     rules: {
       'no-console': 'off',
+      'unused-imports/no-unused-vars': 'off',
     },
   },
 ];

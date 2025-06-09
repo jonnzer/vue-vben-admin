@@ -585,7 +585,7 @@ const idMainContent = ELEMENT_ID_MAIN_CONTENT;
         :padding-right="contentPaddingRight"
         :padding-top="contentPaddingTop"
         :style="contentStyle"
-        class="transition-[margin-top] duration-200"
+        class="bg-white transition-[margin-top] duration-200"
       >
         <slot name="content"></slot>
 
@@ -601,6 +601,7 @@ const idMainContent = ELEMENT_ID_MAIN_CONTENT;
         :show="!isFullContent"
         :width="footerWidth"
         :z-index="zIndex"
+        class="bg-white"
       >
         <slot name="footer"></slot>
       </LayoutFooter>

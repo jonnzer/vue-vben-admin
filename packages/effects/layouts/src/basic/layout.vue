@@ -32,6 +32,8 @@ import {
 } from './menu';
 import { LayoutTabbar } from './tabbar';
 
+import logo from '/static/logo.png';
+
 defineOptions({ name: 'BasicLayout' });
 
 const emit = defineEmits<{ clearPreferencesAndLogout: []; clickLogo: [] }>();
@@ -216,7 +218,7 @@ const headerSlots = computed(() => {
     @side-mouse-leave="handleSideMouseLeave"
     @toggle-sidebar="toggleSidebar"
     @update:sidebar-collapse="
-      (value: boolean) => updatePreferences({ sidebar: { collapsed: value } })
+      (value: boolean) => updatePreferences({ sidebar: { collapsed: false } })
     "
     @update:sidebar-enable="
       (value: boolean) => updatePreferences({ sidebar: { enable: value } })
@@ -232,20 +234,21 @@ const headerSlots = computed(() => {
   >
     <!-- logo -->
     <template #logo>
-      <VbenLogo
+      <!-- <VbenLogo
         v-if="preferences.logo.enable"
         :fit="preferences.logo.fit"
         :class="logoClass"
         :collapsed="logoCollapsed"
         :src="preferences.logo.source"
-        :text="preferences.app.name"
+        text="preferences.app.name"
         :theme="showHeaderNav ? headerTheme : theme"
         @click="clickLogo"
       >
         <template v-if="$slots['logo-text']" #text>
           <slot name="logo-text"></slot>
         </template>
-      </VbenLogo>
+      </VbenLogo> -->
+      <img :src="logo" class="logo-wrapper p-1" alt="" />
     </template>
     <!-- 头部区域 -->
     <template #header>
@@ -383,3 +386,10 @@ const headerSlots = computed(() => {
     </template>
   </VbenAdminLayout>
 </template>
+<style lang="scss" scoped>
+.logo-wrapper {
+  width: 170px;
+  height: auto;
+  object-fit: cover;
+}
+</style>

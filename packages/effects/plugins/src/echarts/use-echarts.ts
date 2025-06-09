@@ -119,4 +119,4 @@ function useEcharts(chartRef: Ref<EchartsUIType>) {
 
 export { useEcharts };
 
-export type { EchartsUIType };
+export type { EChartsOption, EchartsUIType };

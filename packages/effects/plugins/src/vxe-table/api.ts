@@ -58,6 +58,16 @@ export class VxeGridApi {
     bindMethods(this);
   }
 
+  async exportData() {
+    try {
+      await this.grid.exportData({
+        type: 'xlsx',
+      });
+    } catch (error) {
+      console.error('Error occurred while exportData:', error);
+    }
+  }
+
   mount(instance: null | VxeGridInstance, formApi: ExtendedFormApi) {
     if (!this.isMounted && instance) {
       this.grid = instance;

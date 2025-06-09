@@ -6,6 +6,8 @@ import { usePreferences } from '@vben/preferences';
 
 import { useVbenForm } from '@vben-core/form-ui';
 
+import VxeUIPluginExportXLSX from '@vxe-ui/plugin-export-xlsx';
+import ExcelJS from 'exceljs';
 import {
   VxeButton,
   VxeCheckbox,
@@ -96,7 +98,9 @@ export function initVxeTable() {
   // VxeUI.component(VxeTextarea);
   VxeUI.component(VxeTooltip);
   VxeUI.component(VxeUpload);
-
+  VxeUI.use(VxeUIPluginExportXLSX, {
+    ExcelJS,
+  });
   isInit = true;
 }
 

@@ -163,15 +163,7 @@ export async function javascript(): Promise<Linter.Config[]> {
             allowTernary: true,
           },
         ],
-        'no-unused-vars': [
-          'error',
-          {
-            args: 'none',
-            caughtErrors: 'none',
-            ignoreRestSiblings: true,
-            vars: 'all',
-          },
-        ],
+        'no-unused-vars': 'off',
         'no-use-before-define': [
           'error',
           { classes: false, functions: false, variables: false },
@@ -218,15 +210,7 @@ export async function javascript(): Promise<Linter.Config[]> {
         'unicode-bom': ['error', 'never'],
 
         'unused-imports/no-unused-imports': 'error',
-        'unused-imports/no-unused-vars': [
-          'error',
-          {
-            args: 'after-used',
-            argsIgnorePattern: '^_',
-            vars: 'all',
-            varsIgnorePattern: '^_',
-          },
-        ],
+        'unused-imports/no-unused-vars': 'off',
         'use-isnan': [
           'error',
           { enforceForIndexOf: true, enforceForSwitchCase: true },

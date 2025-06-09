@@ -12,7 +12,7 @@ import { AuthenticationCodeLogin, LoginTabs2 } from '@vben/common-ui';
 import { $t } from '@vben/locales';
 
 import { useVbenForm } from '@vben-core/form-ui';
-import { VbenButton, VbenCheckbox } from '@vben-core/shadcn-ui';
+import { VbenButton } from '@vben-core/shadcn-ui';
 
 import Title from './auth-title.vue';
 import ThirdPartyLogin from './third-party-login.vue';
@@ -100,7 +100,6 @@ async function handleSubmit() {
  * @param values 登录表单数据
  */
 async function handleSmsLogin(values: Recordable<any>) {
-  // eslint-disable-next-line no-console
   console.log(values);
 }
 
@@ -161,7 +160,7 @@ defineExpose({
     <LoginTabs2 :tabs="loginTabs" @update-active-key="updateActiveTabKey">
       <template #account>
         <Form />
-        <div
+        <!-- <div
           v-if="showRememberMe || showForgetPassword"
           class="mb-6 flex justify-between"
         >
@@ -182,7 +181,7 @@ defineExpose({
           >
             {{ $t('authentication.forgetPassword') }}
           </span>
-        </div>
+        </div> -->
         <VbenButton
           :class="{
             'cursor-wait': loading,
@@ -232,7 +231,7 @@ defineExpose({
     </slot>
 
     <slot name="to-register">
-      <div v-if="showRegister" class="mt-3 text-center text-sm">
+      <!-- <div v-if="showRegister" class="mt-3 text-center text-sm">
         {{ $t('authentication.accountTip') }}
         <span
           class="vben-link text-sm font-normal"
@@ -240,7 +239,7 @@ defineExpose({
         >
           {{ $t('authentication.createAccount') }}
         </span>
-      </div>
+      </div> -->
     </slot>
   </div>
 </template>

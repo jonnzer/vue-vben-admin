@@ -39,7 +39,9 @@
     "@vben/utils": "workspace:*",
     "@vueuse/core": "catalog:",
     "@vueuse/motion": "catalog:",
+    "@vxe-ui/plugin-export-xlsx": "4.2.1",
     "echarts": "catalog:",
+    "exceljs": "4.4.0",
     "vue": "catalog:",
     "vxe-pc-ui": "catalog:",
     "vxe-table": "catalog:"

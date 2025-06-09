@@ -10,5 +10,11 @@
     "title": "Dashboard",
     "analytics": "Analytics",
     "workspace": "Workspace"
+  },
+  "admin": {
+    "registerUsers": "注册用户",
+    "potentialUsers": "意向用户",
+    "GPCVisits": "GPC访问记录",
+    "SolidMaterialsVisits": "固态胺访问记录"
   }
 }
